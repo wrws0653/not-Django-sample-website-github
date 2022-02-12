@@ -1,0 +1,26 @@
+body {
+  margin: 20px;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  background: #f8f4e6;
+}
+
+h1 {
+  border-bottom: #d13419 solid;
+  border-width: 5px;
+  width: 100%;
+}
+
+table, td ,th {
+  border: 2px #000 solid;
+  border-collapse:collapse;
+}
+
+th {
+  width: 100px;
+  font-weight: bold;
+}
+
+td {
+  padding: 0 10px 0 10px;
+}

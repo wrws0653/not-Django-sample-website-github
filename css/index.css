@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  background: #f8f4e6;
+}
+
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  background-color:#f8f4e6;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation:0.01s linear opening;
+}
+
+@keyframes opening{
+  0%{
+    opacity: 0.0;
+  }
+  100%{
+    opacity: 1.0;
+  }
+}
+
+.loadedfirst {
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.27s;
+}
+
+.loadedsometimes {
+  visibility: hidden;
+}
+
+.containerLoad {
+  width: 800px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Delete {
+  font-size: 24px;
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  background: #d13419;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20%;
+  margin: 2px;
+  user-select: none;
+}
+.WDelete {
+  font-size: 34px;
+  font-weight: bold;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+.RDelete {
+  margin-left: 18px;
+  font-size: 34px;
+  font-weight: bold;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+
+:root{
+  --Time: 1.75s;
+}
+
+.o1 {
+  animation:var(--Time) linear infinite rotation-o1;
+}
+
+@keyframes rotation-o1{
+  0%{
+    transform-origin: 150px 18px;
+    transform:rotate(0deg);
+  }
+  49.99%{
+    transform-origin: 150px 18px;
+    transform:rotate(360deg);
+  }
+  50.00%{
+    transform-origin: 170px 18px;
+    transform:rotate(0deg);
+  }
+  100%{
+    transform-origin: 170px 18px;
+    transform:rotate(360deg);
+  }
+}
+
+.o2 {
+  transform-origin: -114px 18px;
+  animation:var(--Time)  linear infinite rotation-o2;
+}
+
+@keyframes rotation-o2{
+  0%{ transform:rotate(0deg);}
+  50%{ transform:rotate(360deg); }
+  100%{ transform:rotate(360deg)}; 
+}
+
+.o3 {
+  transform-origin: -134px 18px;
+  animation:var(--Time)  linear infinite rotation-o3;
+}
+
+@keyframes rotation-o3{
+  0%{transform:rotate(0deg);}
+  50%{ transform:rotate(0deg);}
+  100%{ transform:rotate(360deg); }
+}
+
+
+
+/* WonderRoofロゴ */
+.container {
+  display: flex;
+  padding: 36px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+section > div {
+  font-size: 24px;
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  background: #d13419;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20%;
+  margin: 2px;
+  user-select: none;
+}
+.W {
+  font-size: 34px;
+  font-weight: bold;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+.R {
+  margin-left: 18px;
+  font-size: 34px;
+  font-weight: bold;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+
+/* ロゴホバー */
+.WR{
+  width: 80px;
+  height: 80px;
+}
+.menu-button {
+  position: relative;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  background: #fff;
+}
+.menu-button:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a {
+  transition: 0.3s;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button a:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+a > img {
+  width: 36px;
+  height: 36px;
+  margin:0 auto;
+  display:block;
+  position: absolute;
+  top: 46%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+.menu-button a:nth-child(2) {
+  transition-delay: 0.2s;
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+  background: #55acee;
+}
+.menu-button a:nth-child(3) {
+  transition-delay: 0.3s;
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+  background: #dc4e41;
+}
+.menu-button a:nth-child(4) {
+  transition-delay: 0.4s;
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+  background: #73d366;
+}
+.menu-button:hover a {
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+}
+.menu-button:hover a:nth-child(2) {
+  right: 100px;
+  bottom: -50px;
+}
+.menu-button:hover a:nth-child(3) {
+  right: 10px;
+  bottom: -90px;
+}
+.menu-button:hover a:nth-child(4) {
+  right: -80px;
+  bottom: -50px;
+}
